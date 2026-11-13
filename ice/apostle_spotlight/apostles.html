@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostles Spotlights</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+            background: #e9edef;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .poster {
+            width: min(710px, calc(100vw - 2rem));
+            aspect-ratio: 710 / 542;
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            grid-template-rows: 0.5fr 1.35fr 0.45fr 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+
+            padding: 0.5rem 0.75rem;
+            gap: 0;
+
+            border: 4px solid #05080d;
+            border-radius: 27px;
+            color: white;
+            background: #073d75;
+        }
+
+        .background {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: -2;
+        }
+
+        /* Title */
+        h1 {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            align-self: center;
+            margin: 0;
+            text-align: center;
+            font-size: clamp(1rem, 3vw, 1.8rem);
+            font-weight: 400;
+            text-shadow: 0 2px 5px #0008;
+            z-index: 1;
+        }
+
+        /* First Presidency: three large portraits */
+        .presidency {
+            grid-column: 3 / 11;
+            grid-row: 2;
+
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            justify-items: center;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1;
+        }
+
+        h2 {
+            grid-column: 2 / 12;
+            grid-row: 3;
+            align-self: center;
+            margin: 0;
+            text-align: center;
+            font-size: clamp(0.65rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            text-shadow: 0 2px 5px #0008;
+            z-index: 1;
+        }
+
+        .apostles {
+            grid-column: 2 / 11;
+            grid-row: 4 / 7;
+
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+            justify-items: center;
+            align-items: center;
+            column-gap: 0.4rem;
+            row-gap: 0.3rem;
+            z-index: 1;
+        }
+
+        .portrait {
+            display: block;
+            width: min(100%, 5rem);
+            aspect-ratio: 1 / 1;
+            min-width: 0;
+            object-fit: cover;
+            border: 4px solid white;
+            border-radius: 50%;
+            background: #33485b;
+            box-shadow: 0 2px 8px #0006;
+        }
+
+        .presidency .portrait {
+            width: min(100%, 7.2rem);
+        }
+
+        @media (max-width: 480px) {
+            .poster {
+                border-width: 3px;
+                border-radius: 18px;
+                padding: 0.35rem;
+            }
+
+            .portrait {
+                border-width: 2px;
+            }
+
+            .presidency .portrait {
+                width: min(100%, 5rem);
+            }
+
+            .apostles {
+                grid-column: 2 / 12;
+                column-gap: 0.2rem;
+                row-gap: 0.15rem;
+            }
+
+            h2 {
+                font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="poster">
+
+        
+        <img class="background"
+             src="images/christus.webp"
+             alt="Jesus Christ statue">
+
+        <h1>First Presidency</h1>
+
+        <section class="presidency">
+            <img class="portrait"
+                 src="images/eyring.webp"
+                 alt="First Presidency member">
+
+            <img class="portrait"
+                 src="images/oaks.webp"
+                 alt="Prophet">
+
+            <img class="portrait"
+                 src="images/christofferson.webp"
+                 alt="First Presidency member">
+        </section>
+
+        <h2>Quorum of the Twelve Apostles</h2>
+
+        <section class="apostles">
+            <img class="portrait" src="images/uchtdorf.webp" alt="Apostle">
+            <img class="portrait" src="images/bednar.webp" alt="Apostle">
+            <img class="portrait" src="images/cook.webp" alt="Apostle">
+            <img class="portrait" src="images/anderson.webp" alt="Apostle">
+
+            <img class="portrait" src="images/rasband.webp" alt="Apostle">
+            <img class="portrait" src="images/stevenson.webp" alt="Apostle">
+            <img class="portrait" src="images/renlund.webp" alt="Apostle">
+            <img class="portrait" src="images/gong.webp" alt="Apostle">
+
+            <img class="portrait" src="images/soares.webp" alt="Apostle">
+            <img class="portrait" src="images/kearon.webp" alt="Apostle">
+            <img class="portrait" src="images/causse.webp" alt="Apostle">
+            <img class="portrait" src="images/gilbert.webp" alt="Apostle">
+        </section>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,193 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #38443d;
+  background: linear-gradient(to bottom, #d3d3d3, #001f3f);
+  background-attachment: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 20px 0 0;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 1100px;
+  height: 260px;
+  margin: 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  background-image: url('../images/icenter.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header-image h1 {
+  margin: 0;
+  padding: 12px 18px;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  text-shadow: 2px 2px 5px #000000;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+
+.content-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+
+  background-color: #f8f7f2;
+  margin: 24px auto 40px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 36px;
+  border: 1px solid #dce3db;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.content-box h2 {
+  margin: 0;
+  color: #40594a;
+  font-size: 1.6rem;
+}
+
+.content-box p {
+  margin: 0;
+  color: #626d65;
+  font-size: 1rem;
+}
+
+.devotional-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background-color: #fffefa;
+  font-size: 1rem;
+}
+
+.devotional-table th,
+.devotional-table td {
+  padding: 15px;
+  border: 1px solid #dce3db;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.devotional-table th {
+  background-color: #dce7dc;
+  color: #34483b;
+}
+
+.devotional-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 24px;
+  background-color: #f0f3ed;
+  border: 1px solid #dce3db;
+  border-radius: 7px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  color: #40594a;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  font-size: 1rem;
+  border: 1px solid #cbd6ca;
+  border-radius: 5px;
+  background-color: #fffefa;
+  color: #38443d;
+}
+
+.add-button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: #587761;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #496650;
+}
+
+@media (max-width: 600px) {
+  .header-image {
+    height: 170px;
+    background-size: cover;
+  }
+
+  .header-image h1 {
+    font-size: 2rem;
+  }
+}
+  .container {
+    padding: 0 10px;
+  }
+
+  .header-image {
+    min-height: 100px;
+  }
+
+  .content-box {
+    padding: 14px;
+    gap: 20px;
+  }
+
+  .devotional-form {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 12px;
+  }
+
+  .devotional-table {
+    min-width: 500px;
+    font-size: 0.8rem;
+  }
+
+  .devotional-table th,
+  .devotional-table td {
+    padding: 9px 7px;
+  }
+
